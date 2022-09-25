@@ -1,0 +1,136 @@
+//=== Delete all margins in project ==============================
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+//=== Height page 100% ==============================
+html,
+body {
+	// height: 100%;
+}
+
+//=== Default font size ==============================
+html {
+	font-size: $fontSize;
+}
+
+//=== Default font + mobile & laptop sizing ==============================
+body {
+	line-height: 1;
+	font-family: $fontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+//=== Display block some elements ==============================
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+
+//=== Delete link decoration ==============================
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+
+//=== Delete list styles ==============================
+ul li {
+	list-style: none;
+}
+
+//=== Pseudo-elements border-box==============================
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+//=== Form element's font  ==============================
+input,
+button,
+textarea {
+	font-family: $fontFamily;
+	font-size: inherit;
+}
+
+button {
+	background-color: unset;
+}
+
+//=== Delete a special button in text's inputs  ==============================
+input::-ms-clear {
+	display: none;
+}
+
+//=== Delete special focus stile in Firefox browser ==============================
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+//=== Delete title's style==============================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+//=================================
+//=== Situational ==============================
+//=================================
+
+//=== Pseudo-classes outline-none ==============================
+// :focus,
+// :active {
+// 	// outline: none;
+// }
+// a:focus,
+// a:active {
+// 	// outline: none;
+// }
+
+// //=== Min width for page ==============================
+// body {
+// 	// min-width: $minWidth;
+// }
+
+//=== Button pointer ==============================
+button {
+	cursor: pointer;
+	// background-color: inherit;
+}
+
+//=== Delete special focus stile in Firefox browser ==============================
+//button::-moz-focus-inner,
+// input[type="color"]::-moz-focus-inner,
+// input[type="reset"]::-moz-focus-inner,
+// input[type="button"]::-moz-focus-inner,
+// input[type="submit"]::-moz-focus-inner {
+// 	// padding: 0;
+// 	// border: 0;
+// }
+
+//=== IMG vertical align ==============================
+img {
+	vertical-align: top;
+}
+
+
+// -webkit-: браузеры Chrome, Safari, Opera;
+// -moz-: браузер Mozilla Firefox;
+// -ms-: браузер Internet Explorer.

@@ -1,0 +1,167 @@
+@use "sass:math";
+
+@import "mixins";
+
+/*=== Fonts ==============================*/
+
+@import "fonts";
+
+// font-family: 'PT Sans', sans-serif;
+// @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+//Roboto
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap&subset=cyrillic-ext);
+
+
+//=== Icon fonts===
+
+@import "icons";
+
+//=== Default fonts===
+
+$fontFamily: "Roboto";
+$fontSize: 16px;
+
+/*=== Variables ==============================*/
+
+$mainColor: #000;
+
+// Минимальная ширина страницы
+$minWidth: 320px;
+// Ширина полотна (макета)
+$maxWidth: 1280;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1220;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 12;
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+// $md1: $maxWidthContainer + 12;
+
+// Брейк-поинты
+$md1: $containerWidth; // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+// $pc
+$md2: 1120; // Планшеты, некоторые телефоны в горизонтальном положении
+// $tablet: 991.98;
+$md3: 991.98; // Телефоны L
+// $mobile: 767.98;
+$md4: 850; // Телефоны S
+// $mobileSmall: 479.98;
+$md5: 479.98;
+
+/*
+@media (max-width: $md1 + px) {
+}
+@media (max-width: $md2 + px) {
+}
+@media (max-width: $md3 + px) {
+}
+@media (max-width: $md4 + px) {
+}
+*/
+
+/*=== Null styles ==============================*/
+
+@import "null";
+
+/*=== Common styles ==============================*/
+
+@import "ui";
+
+/*=== Body ==============================*/
+
+body {
+	min-width: $minWidth;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+/*=== Wrapper ==============================*/
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+/*=== Container ==============================*/
+._container {
+	max-width: $maxWidthContainer + px;
+	padding: 0px 20px;
+	margin: 0 auto;
+	@media (max-width: $md5 + px) {
+		padding: 0px 15px;
+	}
+}
+
+.page {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	&._shifted {
+		animation: page-left-big 0.4s ease 0s 1 normal forwards;
+		@media (max-width: $md5 + px) {
+			animation: page-left-small 0.4s ease 0s 1 normal forwards;
+		}
+	}
+	&._unshifted {
+		animation: page-return-big 0.4s ease 0s 1 normal forwards;
+		@media (max-width: $md5 + px) {
+			animation: page-return-small 0.4s ease 0s 1 normal forwards;
+		}
+	}
+}
+
+@keyframes page-left-big {
+	0% {
+		left: 0px;
+	}
+	100% {
+		left: 320px;
+	}
+}
+
+@keyframes page-left-small {
+	0% {
+		left: 0px;
+	}
+	100% {
+		left: 270px;
+	}
+}
+
+@keyframes page-return-big {
+	0% {
+		left: 320px;
+	}
+	100% {
+		left: 0px;
+	}
+}
+
+@keyframes page-return-small {
+	0% {
+		left: 270px;
+	}
+	100% {
+		left: 0px;
+	}
+}
+
+/*=== Header ==============================*/
+@import "header";
+
+/*=== Pages ==============================*/
+main {
+	flex: 1 1 auto;
+}
+
+@import "index-page";
+@import "product";
+@import "popup";
+
+/*=== Footer ==============================*/
+@import "footer";

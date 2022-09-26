@@ -1,32 +1,30 @@
-# Заголовок
-## Заголовок
-### Заголовок
+# Print Topic - T-Shirt Shop (HTML / CSS Layout)
+
+
+### Немного о проекте
+
+В данном проекте мной в основном отрабатывалась именно верстка. Сверстано 2 страницы: странца каталога и старница продукта. Чтобы сделать сайт более динамичным и интересным для просмотра, я так же использовал в проекте JavaScrip. Но важно отметить, что когда верстался проект мной были изучены только базовые основы JavaScript-а. Поэтому прошу js код в данном проекте строго не судить :sweet:
 ___
 
 
-**bold**
-*italic*
+### Ссылка на проект
 
-:white_check_mark
->> ddd
->>> eee
+:link: [PrintTopic](http://petproject1.ru/)
+___
 
 
-tex fdjlgjl  `jgfld` 
+### Фото проекта
 
-```
-dssdsd
-```
++ Страница каталога (главная страница)
 
-+ dfdfdfdf
-+ fdd
-  - ddsd
+![Catalog page](/src/img/forGit/catalogPageScreen.png)
 
++ Страница продукта
 
- - [X] ffdfd
+![Product page](/src/img/forGit/2022-09-26_17-00-57.png)
+___
 
 
-![logo](/dist/img/advantages/1.webp)
 
 
 
